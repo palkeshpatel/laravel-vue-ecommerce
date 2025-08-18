@@ -14,11 +14,20 @@ This guide helps you resolve common issues with the Laravel CI workflow.
 
 ### 2. **Workflow Fails on "Install Node.js dependencies"**
 
-**Error**: `npm ci` fails
+**Error**: `npm ci` fails with dependency conflicts
 **Solution**:
 - Check if `package.json` exists in the root directory
 - Ensure `package-lock.json` is committed to the repository
 - Try running `npm install` locally first
+- **For Vite conflicts**: Update to compatible versions:
+  ```json
+  {
+    "vite": "^6.0.0",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@tailwindcss/vite": "^4.1.12"
+  }
+  ```
+- **Use legacy peer deps**: Run `npm ci --legacy-peer-deps` in CI
 
 ### 3. **Database Migration Fails**
 
@@ -35,6 +44,7 @@ This guide helps you resolve common issues with the Laravel CI workflow.
 - Check if `vite.config.js` exists
 - Ensure all required Node.js dependencies are installed
 - Verify the build script exists in `package.json`
+- Check for Vite version compatibility issues
 
 ### 5. **PHP Syntax Check Fails**
 
@@ -59,8 +69,8 @@ Run these commands locally to replicate the CI environment:
 # Test Composer
 composer install --no-progress --prefer-dist --optimize-autoloader
 
-# Test Node.js
-npm ci
+# Test Node.js (with legacy peer deps)
+npm install --legacy-peer-deps
 
 # Test Laravel
 cp .env.example .env
@@ -91,7 +101,7 @@ Ensure these files exist in your repository:
 - **MySQL 8.0** service for database testing
 - **Composer** dependency installation
 - **Laravel** configuration and migrations
-- **Asset building** with npm
+- **Asset building** with npm (using legacy peer deps)
 - **PHP syntax checking**
 - **Basic Laravel health checks**
 
