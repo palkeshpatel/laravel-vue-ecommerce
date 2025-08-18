@@ -25,7 +25,7 @@ We take security vulnerabilities seriously. If you discover a security issue, pl
 
 #### Option 1: Email (Recommended)
 
-Send a detailed report to: **security@your-domain.com**
+Send a detailed report to: **patel.palkesh@gmail.com**
 
 #### Option 2: GitHub Security Advisory
 

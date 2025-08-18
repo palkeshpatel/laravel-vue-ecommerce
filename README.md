@@ -342,9 +342,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For professional support and custom development:
 
--   **Email**: [your-email@example.com]
--   **Website**: [your-website.com]
--   **LinkedIn**: [your-linkedin-profile]
+-   **Email**: [patel.palkesh@gmail.com](mailto:patel.palkesh@gmail.com)
+-   **Portfolio**: [https://palkeshpatel.github.io/my-portfolio/](https://palkeshpatel.github.io/my-portfolio/)
+-   **LinkedIn**: [https://www.linkedin.com/in/palkesh-patel-429b3b55/](https://www.linkedin.com/in/palkesh-patel-429b3b55/)
 
 ## 🌟 Star History
 
@@ -367,7 +367,9 @@ This project demonstrates:
 -   ✅ **Production Ready**: Optimized for deployment and scaling
 -   ✅ **Developer Friendly**: Clean code, comprehensive documentation, and extensible architecture
 
-**Built with ❤️ using Laravel, Filament, and Vue 3**
+**Built with ❤️ by [Palkesh Patel](https://palkeshpatel.github.io/my-portfolio/) - Full Stack Laravel + Vue.js Developer**
+
+*9+ years of experience in web development, specializing in Laravel, Vue.js, and modern e-commerce solutions.*
 
 ---
 

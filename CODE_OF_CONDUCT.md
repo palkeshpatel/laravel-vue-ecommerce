@@ -60,7 +60,7 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement at
-conduct@your-domain.com.
+patel.palkesh@gmail.com.
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the
@@ -130,7 +130,7 @@ https://www.contributor-covenant.org/translations.
 
 ## 📞 Contact Information
 
--   **Email**: conduct@your-domain.com
+-   **Email**: patel.palkesh@gmail.com
 -   **GitHub Issues**: [Create an issue](https://github.com/palkeshpatel/ecommerce-website/issues)
 -   **Community Leaders**: [@palkeshpatel](https://github.com/palkeshpatel)
 
