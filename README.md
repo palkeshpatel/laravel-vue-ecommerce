@@ -11,15 +11,11 @@ A modern, full-featured e-commerce application built with Laravel 12, Filament A
 
 ### 🔐 Admin Login
 
-![Admin Login](login.jpg)
+![Admin Login](https://raw.githubusercontent.com/palkeshpatel/ecommerce-website/refs/heads/main/public/login.jpg)
 
 ### 📊 Admin Dashboard
 
-![Admin Dashboard](dashboard.png)
-
-### 🏠 Customer Frontend
-
-![Customer Frontend](frontend.png)
+![Admin Dashboard](https://raw.githubusercontent.com/palkeshpatel/ecommerce-website/refs/heads/main/public/dasbord.jpg)
 
 ## 🚀 Features
 
