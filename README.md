@@ -8,8 +8,9 @@
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.x-38B2AC.svg)](https://tailwindcss.com)
 [![PHP](https://img.shields.io/badge/PHP-8.2+-777BB4.svg)](https://php.net)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![CI Status](https://github.com/palkeshpatel/ecommerce-website/workflows/Laravel%20CI/badge.svg)](https://github.com/palkeshpatel/ecommerce-website/actions)
 [![Stars](https://img.shields.io/github/stars/palkeshpatel/ecommerce-website?style=social)](https://github.com/palkeshpatel/ecommerce-website)
-[![Forks](https://img.shields.io/github/forks/palkeshpatel/ecommerce-website?style=social)](https://github.com/palkeshpatel/ecommerce-website)
+[![Forks](https://img.shields.io/badge/github-forks-palkeshpatel/ecommerce-website?style=social)](https://github.com/palkeshpatel/ecommerce-website)
 
 ## 📋 Table of Contents
 

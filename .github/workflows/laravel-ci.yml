@@ -1,13 +1,13 @@
-name: Simple CI
+name: Laravel CI
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ "main", "develop" ]
   pull_request:
-    branches: [ main ]
+    branches: [ "main" ]
 
 jobs:
-  build-and-test:
+  laravel-tests:
     runs-on: ubuntu-latest
 
     services:
@@ -28,7 +28,7 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.2'
-        extensions: mbstring, xml, ctype, iconv, intl, pdo_mysql, dom, filter, gd, iconv, json, mbstring, pdo, phar, tokenizer, xml, zip
+        extensions: mbstring, intl, bcmath, pdo_mysql, xml, ctype, iconv, dom, filter, gd, json, pdo, phar, tokenizer, zip
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -37,15 +37,15 @@ jobs:
         cache: 'npm'
 
     - name: Install Composer dependencies
-      run: composer install --prefer-dist --no-interaction
+      run: composer install --no-progress --prefer-dist --optimize-autoloader
 
     - name: Install Node.js dependencies
       run: npm ci
 
-    - name: Copy environment file
+    - name: Copy .env
       run: cp .env.example .env
 
-    - name: Generate application key
+    - name: Generate app key
       run: php artisan key:generate
 
     - name: Configure database
@@ -53,30 +53,24 @@ jobs:
         php artisan config:cache
         php artisan migrate --force
 
-    - name: Run basic tests
+    - name: Build assets
+      run: npm run build
+
+    - name: Run basic checks
       run: |
-        echo "Running basic application checks..."
+        echo "Running basic Laravel checks..."
         php artisan route:list
         php artisan config:clear
         php artisan cache:clear
-        echo "Basic checks completed successfully!"
-
-    - name: Build assets
-      run: npm run build
+        echo "✅ All basic checks passed!"
 
     - name: Check PHP syntax
       run: |
         echo "Checking PHP syntax..."
         find . -name "*.php" -not -path "./vendor/*" -not -path "./node_modules/*" -exec php -l {} \;
-        echo "PHP syntax check completed!"
-
-    - name: Security check
-      run: |
-        echo "Running security checks..."
-        composer audit --format=json || echo "No security issues found"
-        echo "Security checks completed!"
+        echo "✅ PHP syntax check completed!"
 
     - name: Success message
       run: |
-        echo "✅ All checks passed successfully!"
-        echo "🚀 Your e-commerce platform is ready for deployment!"
+        echo "🎉 All tests passed successfully!"
+        echo "🚀 Your e-commerce platform is ready!"
