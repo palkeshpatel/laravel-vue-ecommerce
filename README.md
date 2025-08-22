@@ -73,15 +73,21 @@
 
 ### 🔐 Admin Login
 
-![Admin Login](https://raw.githubusercontent.com/palkeshpatel/ecommerce-website/refs/heads/main/public/login.jpg)
+![Admin Login](./public/img/login.jpg)
+
+*Secure admin login interface with modern dark theme design*
 
 ### 📊 Admin Dashboard
 
-![Admin Dashboard](https://raw.githubusercontent.com/palkeshpatel/ecommerce-website/refs/heads/main/public/dasbord.jpg)
+![Admin Dashboard](./public/img/dasbord.jpg)
+
+*Comprehensive admin dashboard featuring order management, product analytics, and real-time statistics*
 
 ### 🛒 Customer Frontend
 
 ![Customer Frontend](https://via.placeholder.com/800x400/4F46E5/FFFFFF?text=Customer+Frontend+Screenshot)
+
+*Modern customer-facing e-commerce interface (screenshot coming soon)*
 
 ## ⚡ Quick Start
 
