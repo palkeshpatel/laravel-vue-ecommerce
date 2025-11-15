@@ -33,6 +33,16 @@
 -   **Admin Panel**: [Admin Demo](http://localhost:8000/admin)
 -   **GitHub Repository**: [https://github.com/palkeshpatel/ecommerce-website](https://github.com/palkeshpatel/ecommerce-website)
 
+### 🔐 Default Login Credentials
+
+After running the seeders, use these credentials to access the admin panel:
+
+-   **Email**: `admin@example.com`
+-   **Password**: `password`
+-   **Admin URL**: `http://localhost:8000/admin`
+
+⚠️ **Note**: These are default credentials for development. Change them immediately in production!
+
 ## ✨ Key Features
 
 ### 🎛️ **Admin Panel (Filament)**
@@ -107,8 +117,10 @@ php artisan key:generate
 # Configure database and run migrations
 php artisan migrate --seed
 
-# Create admin user
-php artisan make:filament-user
+# Default admin credentials (created by seeder):
+# Email: admin@example.com
+# Password: password
+# Access: http://localhost:8000/admin
 
 # Build assets and start server
 npm run build
@@ -170,7 +182,23 @@ php artisan serve
     php artisan migrate --seed
     ```
 
-7. **Create Admin User**
+    This will create:
+
+    - Default admin user (see credentials below)
+    - Sample categories and products
+    - Sample customers and orders
+
+7. **Default Admin Credentials**
+
+    The seeder automatically creates a default admin user:
+
+    - **Email**: `admin@example.com`
+    - **Password**: `password`
+    - **Access**: Admin Panel at `http://localhost:8000/admin`
+
+    ⚠️ **Important**: Change the default password after first login in production!
+
+    **Alternative**: You can also create a custom admin user using:
 
     ```bash
     php artisan make:filament-user
