@@ -67,7 +67,7 @@
 | **MySQL**       | 8.0+    | Database            |
 | **PHP**         | 8.2+    | Server Language     |
 | **Node.js**     | 18+     | Build Tool          |
-| **Vite**        | Latest  | Asset Bundling      |
+| **Vite**        | 7.x     | Asset Bundling      |
 
 ## 📸 Screenshots
 
@@ -75,19 +75,19 @@
 
 ![Admin Login](./public/img/login.jpg)
 
-*Secure admin login interface with modern dark theme design*
+_Secure admin login interface with modern dark theme design_
 
 ### 📊 Admin Dashboard
 
 ![Admin Dashboard](./public/img/dasbord.jpg)
 
-*Comprehensive admin dashboard featuring order management, product analytics, and real-time statistics*
+_Comprehensive admin dashboard featuring order management, product analytics, and real-time statistics_
 
 ### 🛒 Customer Frontend
 
 ![Customer Frontend](https://via.placeholder.com/800x400/4F46E5/FFFFFF?text=Customer+Frontend+Screenshot)
 
-*Modern customer-facing e-commerce interface (screenshot coming soon)*
+_Modern customer-facing e-commerce interface (screenshot coming soon)_
 
 ## ⚡ Quick Start
 
@@ -186,6 +186,48 @@ php artisan serve
     ```bash
     php artisan serve
     ```
+
+### Troubleshooting
+
+#### npm install Errors
+
+If you encounter dependency conflicts (e.g., `ERESOLVE could not resolve`), here are the solutions:
+
+**Issue:** Version conflicts between `vite`, `laravel-vite-plugin`, and `@vitejs/plugin-vue`
+
+**Solution 1: Use Compatible Versions (Current Setup)**
+The project now uses:
+
+-   `vite@^7.0.0`
+-   `laravel-vite-plugin@^2.0.0`
+-   `@vitejs/plugin-vue@^6.0.0`
+
+**Quick Fix:**
+
+```bash
+# Clear npm cache and node_modules
+rm -rf node_modules package-lock.json
+npm cache clean --force
+
+# Install with updated dependencies
+npm install
+```
+
+**Solution 2: If Solution 1 Doesn't Work**
+Use `--legacy-peer-deps` flag (works but may have compatibility issues):
+
+```bash
+npm install --legacy-peer-deps
+```
+
+**Solution 3: Revert to Vite 6 (If Needed)**
+If you need to use Vite 6, update `package.json`:
+
+```json
+"vite": "^6.0.0",
+"laravel-vite-plugin": "^1.1.0",
+"@vitejs/plugin-vue": "^5.2.4"
+```
 
 ## 🔧 Configuration
 
@@ -375,7 +417,7 @@ This project demonstrates:
 
 **Built with ❤️ by [Palkesh Patel](https://palkeshpatel.github.io/my-portfolio/) - Full Stack Laravel + Vue.js Developer**
 
-*9+ years of experience in web development, specializing in Laravel, Vue.js, and modern e-commerce solutions.*
+_9+ years of experience in web development, specializing in Laravel, Vue.js, and modern e-commerce solutions._
 
 ---
 
